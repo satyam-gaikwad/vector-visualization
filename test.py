@@ -168,7 +168,6 @@ num = int(c3.number_input("Enter number of input vectors for plotting."))
 for i in range(num):
 	ivector = c3.text_input(f'vector_{i+1}')
 	vec_list[f'vector_{i+1}'] = np.array(ivector.split(','),dtype=float)
-
 	if dim==2:
 		plot = c3.toggle('Plot & Animate',key=f'ani_{i}')
 		animate = c3.toggle('animate it?',key=i)
@@ -176,8 +175,8 @@ for i in range(num):
 			animate_vector(origin,np.array(ivector.split(','),dtype=float))	
 		if plot==True:
 			plot_vector(origin,np.array(ivector.split(','),dtype=float))
-        else:
-            st.write("Its working")
+	else:
+		st.write("Its working")
 	
 with st.expander("Inner Products"):
 	ip1 = st.radio('choose 1',options = vec_list.keys(),key=f'first')
