@@ -2,6 +2,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
 from matplotlib.animation import FuncAnimation
 import streamlit as st
 import streamlit.components.v1 as comp
@@ -88,7 +89,7 @@ def is_independent(vectors):
     matrix = []
     for vec in vectors.values():
         if len(vectors) > dim:
-            return f"All Vectors must be from R{dim} space."
+            return f"maximum of vectors needed to be linearly independent is {dim}, but {len(vectors)} were given."
         matrix.append(vec)
     st.write(matrix)
     if np.linalg.det(matrix)==0:
