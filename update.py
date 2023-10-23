@@ -175,7 +175,7 @@ for i in range(num):
 	ivector = c3.text_input(f'vector_{i+1}')
 	vec_list[f'vector_{i+1}'] = np.array(ivector.split(','),dtype=float)
 	if dim==2:
-		plot = c3.toggle('Plot & Animate',key=f'ani_{i}',on_click=pnp())
+		c3.toggle('Plot & Animate',key=f'ani_{i}',value = False,on_change=pnp())
 		animate = c3.toggle('animate it?',key=i)
 	
 with st.expander("Inner Products"):
