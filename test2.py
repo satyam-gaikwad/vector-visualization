@@ -1,8 +1,8 @@
 #working
 
 import numpy as np
-import matplotlib.pyplot as plt
 import matplotlib
+import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import streamlit as st
 import streamlit.components.v1 as comp
