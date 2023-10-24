@@ -222,7 +222,7 @@ with st.expander("Orthonormal Vectors"):
 
 	if dim!=2:
 		st.write("Entered vectors are not 2 dimensional to plot.")
-	elif len(orth) != 0 and dim==2:
+	elif orth != None  and dim==2:
 		for i in orth:
 			st.write(i[5:])
 			st.write(f'Transform it from {vec_list[i[5:]]} to {orth[i]}')
