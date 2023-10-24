@@ -115,7 +115,7 @@ def  orthonormal(vectors):
 			orthonormal_set[f'orth_vector_{num}'] = new_vec1
 		return orthonormal_set
 	else:
-		return "Given vectors are not linearly independent"
+		return None
 
 
 
@@ -220,7 +220,7 @@ with st.expander("Orthonormal Vectors"):
 	if st.button("Show Orthogonal Vectors"):
 		st.write(orth)
 
-	if orth != "Given vectors are not linearly independent" and dim==2:
+	if orth != None and dim==2:
 		for i in orth:
 			st.write(i[5:])
 			st.write(f'Transform it from {vec_list[i[5:]]} to {orth[i]}')
