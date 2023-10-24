@@ -220,14 +220,15 @@ with st.expander("Orthonormal Vectors"):
 	if st.button("Show Orthogonal Vectors"):
 		st.write(orth)
 
-	if orth != None and dim==2:
+	if dim!=2:
+		st.write("Entered vectors are not 2 dimensional to plot.")
+	elif len(orth) != 0 and dim==2:
 		for i in orth:
 			st.write(i[5:])
 			st.write(f'Transform it from {vec_list[i[5:]]} to {orth[i]}')
 			if st.toggle('Transform and Animate',key = f'Trans{i}'):
 				plot_vector(vec_list[i[5:]],orth[i])
-	elif dim!=2:
-		st.write("Entered vectors are not 2 dimensional to plot.")
+	
 
 
 if len(pvectors)!=0:
